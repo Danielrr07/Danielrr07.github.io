@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <img src="myAvatar.png" alt= "Avatar Based On Me" />.
+        <script>
+        function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+        }
+        </script>
+    </head>
+    <body onload="startTime()"></body>
+        <h1> Hi, my name is Daniel, I am from the United States; I was born in Paramount, California</h1>
+        <h1> My favorite sport is soccer; My favorite soccer team is FC Barcelona</h1>
+        <h1> I am a junior in Warren  High School and I am scared to graduate next year because I still don't know what to major in</h1>
+    </body>
+</html>

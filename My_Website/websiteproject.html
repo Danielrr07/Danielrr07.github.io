@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title> FACTS ABOUT ME</title>
+        <link href="websiteproject.css" rel="stylesheet" type="text/css">
+        <script>
+        function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('txt').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+        }
+        </script>
+    </head>
+    <body onload="startTime()">
+      <div id="txt"></div>
+    </body>
+  <div class="imgcontainer">
+    <img src="Danielwebsite1.png" alt="logo" class="logo">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+    
+    
+    <form action="websiteproject2.html" method="get">
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </form>
+  </div>
+
+  <div class="container" style="background-color:#O5OED">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot<a href='#'>password?</a></span>
+  </div>
+</form>
+</html>
